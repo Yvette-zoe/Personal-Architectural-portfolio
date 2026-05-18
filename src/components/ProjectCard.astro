@@ -1,0 +1,96 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import { CARD_IMAGE, IMAGE_FORMAT, IMAGE_QUALITY } from '../lib/imageOptions';
+import { getProjectSlug, projectUrl, resolveProjectAssets } from '../utils/projects';
+
+interface Props {
+	project: CollectionEntry<'projects'>;
+	/** 首屏卡片使用 eager，避免 LCP 延迟 */
+	priority?: boolean;
+}
+
+const { project, priority = false } = Astro.props;
+const slug = getProjectSlug(project);
+const assets = resolveProjectAssets(project);
+const { title, category, year, location } = project.data;
+const href = projectUrl(slug);
+
+if (!assets) {
+	throw new Error(`项目「${slug}」缺少图片：请在 src/assets/projects/${slug}/ 添加文件并在 projectImages.ts 注册`);
+}
+
+const cover = assets.cover;
+---
+
+<article class="project-card">
+	<a href={href} class="project-card-link">
+		<div class="project-card-media">
+			<Image
+				src={cover}
+				alt={`${title} 封面`}
+				width={cover.width}
+				height={cover.height}
+				widths={[...CARD_IMAGE.widths]}
+				sizes={CARD_IMAGE.sizes}
+				format={IMAGE_FORMAT}
+				quality={IMAGE_QUALITY}
+				loading={priority ? 'eager' : 'lazy'}
+				decoding="async"
+				fetchpriority={priority ? 'high' : 'auto'}
+				class="project-card-img"
+			/>
+		</div>
+		<div class="project-card-body">
+			<h2 class="project-card-title">{title}</h2>
+			<p class="project-card-meta">
+				{category} · {year} · {location}
+			</p>
+		</div>
+	</a>
+</article>
+
+<style>
+	.project-card-link {
+		display: block;
+	}
+
+	.project-card-link:hover {
+		opacity: 1;
+	}
+
+	.project-card-media {
+		position: relative;
+		aspect-ratio: 3 / 2;
+		overflow: hidden;
+		background: var(--color-border);
+		border-radius: var(--radius);
+	}
+
+	.project-card-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.4s ease;
+	}
+
+	.project-card-link:hover .project-card-img {
+		transform: scale(1.03);
+	}
+
+	.project-card-body {
+		padding: var(--space-sm) 0;
+	}
+
+	.project-card-title {
+		font-size: 1.125rem;
+		font-weight: 500;
+		margin: 0 0 0.25rem;
+	}
+
+	.project-card-meta {
+		margin: 0;
+		font-size: 0.8125rem;
+		color: var(--color-text-muted);
+	}
+</style>

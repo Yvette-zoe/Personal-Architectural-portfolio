@@ -1,0 +1,247 @@
+/* 参考 App.tsx：白底、中性色、中文排版 */
+:root {
+	--color-bg: #ffffff;
+	--color-surface: #fafafa;
+	--color-text: #171717;
+	--color-text-secondary: #525252;
+	--color-text-muted: #a3a3a3;
+	--color-text-faint: #d4d4d4;
+	--color-border: #e5e5e5;
+	--color-accent: #8b4a4a;
+	--font-sans: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
+	--font-display: 'Microsoft YaHei UI', 'Noto Sans SC', sans-serif;
+	--max-width: 72rem;
+	--header-height: 5rem;
+	--space-xs: 0.5rem;
+	--space-sm: 1rem;
+	--space-md: 1.5rem;
+	--space-lg: 2rem;
+	--space-xl: 4rem;
+	--space-2xl: 6rem;
+	--tracking-chinese: 0.06em;
+	--tracking-wide: 0.12em;
+	--leading-chinese: 1.85;
+	--transition: 0.3s ease;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	font-family: var(--font-sans);
+	font-size: 1rem;
+	line-height: 1.6;
+	color: var(--color-text);
+	background: var(--color-bg);
+	-webkit-font-smoothing: antialiased;
+	letter-spacing: var(--tracking-chinese);
+}
+
+body.nav-open {
+	overflow: hidden;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+main {
+	min-height: calc(100vh - var(--header-height));
+}
+
+main.main--full {
+	min-height: 100vh;
+}
+
+.container {
+	width: 100%;
+	max-width: var(--max-width);
+	margin: 0 auto;
+	padding: 0 var(--space-md);
+}
+
+@media (min-width: 768px) {
+	.container {
+		padding: 0 2rem;
+	}
+}
+
+.font-display {
+	font-family: var(--font-display);
+}
+
+.tracking-chinese {
+	letter-spacing: var(--tracking-chinese);
+}
+
+.tracking-wide {
+	letter-spacing: var(--tracking-wide);
+}
+
+.leading-chinese {
+	line-height: var(--leading-chinese);
+}
+
+.page-shell {
+	padding-top: 8rem;
+	padding-bottom: var(--space-2xl);
+}
+
+.page-shell--narrow {
+	max-width: 64rem;
+	margin: 0 auto;
+	padding-left: var(--space-md);
+	padding-right: var(--space-md);
+}
+
+@media (min-width: 768px) {
+	.page-shell--narrow {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+}
+
+.page-title-display {
+	font-family: var(--font-display);
+	font-size: clamp(2rem, 5vw, 3rem);
+	font-weight: 700;
+	color: var(--color-text);
+	margin: 0 0 var(--space-sm);
+	letter-spacing: var(--tracking-chinese);
+}
+
+.section-title {
+	font-family: var(--font-display);
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin: 0 0 var(--space-md);
+	letter-spacing: var(--tracking-chinese);
+}
+
+.prose {
+	color: var(--color-text-secondary);
+	line-height: var(--leading-chinese);
+	text-align: justify;
+}
+
+.prose p {
+	margin: 0 0 var(--space-md);
+}
+
+.tag-pill {
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	font-size: 0.75rem;
+	color: var(--color-text-secondary);
+	background: var(--color-surface);
+	letter-spacing: var(--tracking-chinese);
+}
+
+.info-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--space-lg);
+	padding: var(--space-lg) 0;
+	border-top: 1px solid var(--color-border);
+	border-bottom: 1px solid var(--color-border);
+	margin-bottom: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+	.info-grid {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+.info-grid dt {
+	font-size: 0.75rem;
+	color: var(--color-text-muted);
+	margin: 0 0 0.5rem;
+}
+
+.info-grid dd {
+	font-size: 0.875rem;
+	color: var(--color-text-secondary);
+	margin: 0;
+}
+
+.highlight-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.highlight-list li {
+	display: flex;
+	gap: var(--space-sm);
+	align-items: flex-start;
+	color: var(--color-text-secondary);
+	line-height: var(--leading-chinese);
+	margin-bottom: var(--space-md);
+}
+
+.highlight-list li::before {
+	content: '';
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: var(--color-text-muted);
+	margin-top: 0.65em;
+	flex-shrink: 0;
+}
+
+.project-nav {
+	display: flex;
+	justify-content: space-between;
+	gap: var(--space-md);
+	margin-top: var(--space-2xl);
+	padding-top: var(--space-lg);
+	border-top: 1px solid var(--color-border);
+}
+
+.project-nav a {
+	font-size: 0.875rem;
+	color: var(--color-text-secondary);
+	transition: color var(--transition);
+}
+
+.project-nav a:hover {
+	color: var(--color-text);
+}
+
+.project-nav-label {
+	display: block;
+	font-size: 0.75rem;
+	color: var(--color-text-muted);
+	margin-bottom: 0.25rem;
+}
+
+.back-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-size: 0.875rem;
+	color: var(--color-text-muted);
+	margin-bottom: var(--space-lg);
+	transition: color var(--transition);
+}
+
+.back-link:hover {
+	color: var(--color-text);
+}

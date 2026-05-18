@@ -1,0 +1,21 @@
+---
+import { siteConfig } from '../site';
+---
+
+<footer class="site-footer">
+	<p class="footer-brand">{siteConfig.footerText}</p>
+</footer>
+
+<style>
+	.site-footer {
+		padding: 3rem 2rem;
+		text-align: center;
+	}
+
+	.footer-brand {
+		margin: 0;
+		font-size: 0.75rem;
+		color: var(--color-text-faint);
+		letter-spacing: var(--tracking-chinese);
+	}
+</style>

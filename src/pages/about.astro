@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { publicImages } from '../lib/publicImages';
+import { siteConfig } from '../site';
+---
+
+<BaseLayout title="联系" description="联系方式与简介">
+	<div class="contact-page">
+		<div class="contact-card">
+			<img class="contact-avatar" src={publicImages.avatar} alt={siteConfig.name} width="128" height="128" />
+
+			<h1 class="contact-name font-display">
+				{siteConfig.name}｜{siteConfig.nameEn}
+			</h1>
+			<p class="contact-tagline">{siteConfig.tagline}</p>
+
+			<p class="contact-org">{siteConfig.organization}</p>
+
+			<div class="contact-edu">
+				{siteConfig.education.map((line) => <p>{line}</p>)}
+			</div>
+
+			<div class="contact-details">
+				<p>
+					<span class="contact-label">E-mail</span>
+					<a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+				</p>
+			</div>
+
+			<div class="contact-wechat">
+				<p class="contact-wechat-label">微信</p>
+				<img
+					class="contact-wechat-qr"
+					src={publicImages.wechatQr}
+					alt="微信二维码"
+					width="128"
+					height="128"
+					loading="lazy"
+				/>
+			</div>
+		</div>
+	</div>
+</BaseLayout>
+
+<style>
+	.contact-page {
+		min-height: calc(100vh - var(--header-height));
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 6rem 2rem 4rem;
+	}
+
+	.contact-card {
+		text-align: center;
+		max-width: 28rem;
+		width: 100%;
+	}
+
+	.contact-avatar {
+		width: 8rem;
+		height: 8rem;
+		margin: 0 auto 2.5rem;
+		border-radius: 50%;
+		border: 2px solid var(--color-border);
+		object-fit: cover;
+	}
+
+	.contact-name {
+		font-size: 1.5rem;
+		font-weight: 300;
+		letter-spacing: var(--tracking-wide);
+		margin: 0 0 0.5rem;
+	}
+
+	.contact-tagline {
+		font-size: 0.875rem;
+		color: var(--color-text-muted);
+		margin: 0 0 2rem;
+	}
+
+	.contact-org {
+		font-size: 0.875rem;
+		color: var(--color-text-secondary);
+		line-height: var(--leading-chinese);
+		margin: 0 0 1.5rem;
+	}
+
+	.contact-edu {
+		font-size: 0.875rem;
+		color: var(--color-text-secondary);
+		margin-bottom: 1.5rem;
+	}
+
+	.contact-edu p {
+		margin: 0.25rem 0;
+	}
+
+	.contact-details {
+		font-size: 0.875rem;
+		margin-bottom: 2rem;
+	}
+
+	.contact-details p {
+		margin: 0;
+		color: var(--color-text-secondary);
+	}
+
+	.contact-label {
+		color: var(--color-text-muted);
+		margin-right: 0.5rem;
+	}
+
+	.contact-details a {
+		color: var(--color-text-secondary);
+		transition: color var(--transition);
+	}
+
+	.contact-details a:hover {
+		color: var(--color-text);
+	}
+
+	.contact-wechat {
+		margin-top: 2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.contact-wechat-label {
+		font-size: 0.75rem;
+		color: var(--color-text-muted);
+		margin: 0 0 0.75rem;
+	}
+
+	.contact-wechat-qr {
+		width: 8rem;
+		height: 8rem;
+		border-radius: var(--radius);
+		border: 1px solid var(--color-border);
+		object-fit: cover;
+		margin: 0 auto;
+	}
+</style>
