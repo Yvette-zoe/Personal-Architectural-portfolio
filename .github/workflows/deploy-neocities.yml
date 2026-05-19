@@ -9,12 +9,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out code
+      - name: Check out repository
         uses: actions/checkout@v3
 
       - name: Deploy to Neocities
-        uses: neocities/action-deploy@v1
+        uses: bcomnes/deploy-neocities@v1
         with:
-          site: ${{ secrets.NEOCITIES_SITE }}
-          key: ${{ secrets.NEOCITIES_KEY }}
-          dir: ./  # 如果你的网页在根目录，保持 ./ 即可
+          api_key: ${{ secrets.NEOCITIES_KEY }}
