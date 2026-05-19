@@ -3,24 +3,31 @@ name: Deploy to Neocities
 on:
   push:
     branches:
-      - main # 确保这里和你的默认分支名一致 (main 或 master)
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      # 1. 下载代码 (升级到 v4 以消除黄色警告)
-      - name: Check out repository
+      # 拉取仓库代码
+      - name: Checkout
         uses: actions/checkout@v4
 
-      # 2. 使用 rsync 同步文件到 Neocities
-      - name: Deploy via Rsync
-        uses: burnett01/rsync-deployments@5.2
+      # 安装 Node.js
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          switches: -avzr --delete
-          path: ./.
-          remote_path: /
-          remote_host: ssh.neocities.org
-          remote_user: ${{ secrets.NEOCITIES_SITE }} # 你的站点名
-          remote_port: 22
-          remote_key: ${{ secrets.NEOCITIES_KEY }} # 注意这里改成了 remote_key
+          node-version: 20
+
+      # 安装 Neocities CLI
+      - name: Install Neocities CLI
+        run: npm install -g neocities
+
+      # 部署
+      - name: Deploy to Neocities
+        run: |
+          neocities upload ./*
+        env:
+          NEOCITIES_USERNAME: ${{ secrets.NEOCITIES_USERNAME }}
+          NEOCITIES_API_KEY: ${{ secrets.NEOCITIES_API_KEY }}
