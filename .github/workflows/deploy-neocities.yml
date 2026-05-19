@@ -15,6 +15,6 @@ jobs:
       - name: Deploy to Neocities
         uses: neocities/action-deploy@v1
         with:
-          site: ${{ secrets.NEOCITIES_SITE }}
+          site: ${{ secrets.kisroyyy }}
           key: ${{ secrets.NEOCITIES_KEY }}
           dir: ./  # 如果你的网页在根目录，保持 ./ 即可
