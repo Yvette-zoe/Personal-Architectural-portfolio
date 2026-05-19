@@ -9,18 +9,18 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      # 1. 下载代码
+      # 1. 下载代码 (升级到 v4 以消除黄色警告)
       - name: Check out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # 2. 使用 rsync 同步文件到 Neocities
       - name: Deploy via Rsync
         uses: burnett01/rsync-deployments@5.2
         with:
-          switches: -avzr --delete # 同步参数：归档模式、详细、压缩、递归、删除多余文件
-          path: ./. # 本地路径（当前目录）
-          remote_path: / # 远程路径（Neocities 根目录）
+          switches: -avzr --delete
+          path: ./.
+          remote_path: /
           remote_host: ssh.neocities.org
-          remote_user: ${{ secrets.NEOCITIES_SITE }} # 这里填你的站点名（也是用户名）
+          remote_user: ${{ secrets.NEOCITIES_SITE }} # 你的站点名
           remote_port: 22
-          ssh_key: ${{ secrets.NEOCITIES_KEY }} # 这里填你的 API Key
+          remote_key: ${{ secrets.NEOCITIES_KEY }} # 注意这里改成了 remote_key
