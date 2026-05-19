@@ -3,16 +3,24 @@ name: Deploy to Neocities
 on:
   push:
     branches:
-      - main  # 如果你的默认分支是 master，请改成 master
+      - main # 确保这里和你的默认分支名一致 (main 或 master)
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      # 1. 下载代码
       - name: Check out repository
         uses: actions/checkout@v3
 
-      - name: Deploy to Neocities
-        uses: bcomnes/deploy-neocities@v1
+      # 2. 使用 rsync 同步文件到 Neocities
+      - name: Deploy via Rsync
+        uses: burnett01/rsync-deployments@5.2
         with:
-          api_key: ${{ secrets.NEOCITIES_KEY }}
+          switches: -avzr --delete # 同步参数：归档模式、详细、压缩、递归、删除多余文件
+          path: ./. # 本地路径（当前目录）
+          remote_path: / # 远程路径（Neocities 根目录）
+          remote_host: ssh.neocities.org
+          remote_user: ${{ secrets.NEOCITIES_SITE }} # 这里填你的站点名（也是用户名）
+          remote_port: 22
+          ssh_key: ${{ secrets.NEOCITIES_KEY }} # 这里填你的 API Key
