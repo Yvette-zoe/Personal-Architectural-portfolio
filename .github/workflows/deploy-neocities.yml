@@ -10,24 +10,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 拉取仓库代码
+      # 1. 拉代码
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 安装 Node.js
+      # 2. Node
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
-      # 安装 Neocities CLI
+      # 3. 安装依赖
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Astro build
+      - name: Build Astro site
+        run: npm run build
+
+      # 5. 安装 Neocities CLI
       - name: Install Neocities CLI
-        run: npm install -g neocities
+        run: npm install -g neocities-cli
 
-      # 部署
+      # 6. 上传 dist
       - name: Deploy to Neocities
         run: |
-          neocities upload ./*
+          neocities push dist
         env:
           NEOCITIES_USERNAME: ${{ secrets.NEOCITIES_USERNAME }}
           NEOCITIES_API_KEY: ${{ secrets.NEOCITIES_API_KEY }}
