@@ -296,12 +296,12 @@ const projects = [
       { label: '设计团队', text: '粤规科技集团 规划四所' }
     ],
     tags: ['文旅融合', '温泉度假', '乡村振兴'],
-    thumbnail: '/images/projects/thumb_01.png',
+    thumbnail: 'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778669590073-01.png?auth_key=f83e678169c815111700094efbe70b65aa78856679a9011a07ca421b794128cf',
     images: [
-      '/images/projects/project_01_01.png',
-      '/images/projects/project_01_02.png',
-      '/images/projects/project_01_03.png',
-      '/images/projects/project_01_04.png'
+      'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778661343595-portfolio_202512_03.png?auth_key=a740112bc61fb6a813dd9917fec498fdb55f16a9e1d3b8bbaea5b44a17ed6b00',
+      'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778661343713-portfolio_202512_04.png?auth_key=e6e3fd4a4b72309299576b1a1d82a679300862ace1688109f7614c1a1f6bb6d2',
+      'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778661343713-portfolio_202512_05.png?auth_key=923598967cff1b4676db324b0df11c76d735d216265a98cdd56cd29a9a157bb2',
+      'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778661343727-portfolio_202512_06.png?auth_key=d8ee3718426159618407cc8024671e7e0eb525235a475d641a3beb928f88cd8e'
     ],
     content: {
       background: '银盏片区位于广清一体化核心区域，拥有"自然、城市、乡村、产业"复合型环境。片区生态优势明显，但面临可建设土地紧缺与资源粗放利用并存、长隆IP虽已入驻但不足以整合三镇资源、城市配套空间小而散且品质不高等问题。规划旨在通过重整资源，构建全新的城市秩序和格局。',
@@ -326,11 +326,11 @@ const projects = [
       { label: '设计团队', text: '粤规科技集团 规划四所' }
     ],
     tags: ['古村活化', '文化保护', '社区营造'],
-    thumbnail: '/images/projects/thumb_02.png',
+    thumbnail: 'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778669590079-02.png?auth_key=88a251924e382578f5e8cb844831dce4770111bdefa844b02753a69ceea6df5b',
     images: [
-      '/images/projects/project_02_01.png',
-      '/images/projects/project_02_02.png',
-      '/images/projects/project_02_03.png'
+      'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778662476664-portfolio_202512_07.png?auth_key=ade0d31dce32276116307863b004d0fdbb8362afda114e107d52f9d04c73879b',
+      'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778662476673-portfolio_202512_08.png?auth_key=f9a6e5e6fbbdb4a29182dd62258044b2d0b31758ebdc7b2822d205b3cadecec0',
+      'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778662476674-portfolio_202512_09.png?auth_key=53315fcadcc0803b2a66d827bf4139e9ada4bf12528ba7b77b44247962c5e9f7'
     ],
     content: {
       background: '塘尾村是国家级文物保护单位，拥有丰富的艺术底蕴与保存完好的明清古建筑群，为了系统推进塘尾村的乡村振兴，在"百千万工程"背景下，规划通过新文艺带动消费产业升级，探索传统村落的现代活化路径。',
@@ -355,11 +355,11 @@ const projects = [
       { label: '指导老师', text: '胡斌' }
     ],
     tags: ['工业遗产', '桥梁博物馆', '遗址公园'],
-    thumbnail: '/images/projects/thumb_03.png',
+    thumbnail: 'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778669590092-03.png?auth_key=dba89f496855d57be283e2ab98a8fcc81effa91e91c9ab6852be506350603d7a',
     images: [
-      '/images/projects/project_03_01.png',
-      '/images/projects/project_03_02.png',
-      '/images/projects/project_03_03.png'
+      'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778667780691-portfolio_202512_10.png?auth_key=12545e283f0e563d89cf8d69f4b665203767e93416755db8b6d98a440901cbbf',
+      'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778667780693-portfolio_202512_11.png?auth_key=4cbd52c0ec2dd8790525f180c4e15a1e97146e955d2179dd8c030d2eadb5f173',
+      'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778667780692-portfolio_202512_12.png?auth_key=ae5ec6a46132f2c5695cf0da613cc487bb312b4bd7d81227a7bc91278026e3e6'
     ],
     content: {
       background: '白沙沱长江大桥见证了中国铁路建设史，为市级文物保护单位。随着新桥建成，老桥河道安全事故频发，需进行通航安全整改，对老桥进行保护性拆除。为充分发挥文物价值，设计核心旨在争取最大化保护文物本体、最大程度利用拆除文物构件，以延续历史、再现文物活力。',
@@ -384,12 +384,12 @@ const projects = [
       { label: '指导老师', text: '李晓峰' }
     ],
     tags: ['传统村落', '民族聚落', '村民中心'],
-    thumbnail: '/images/projects/thumb_04.png',
+    thumbnail: 'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778669590095-04.png?auth_key=3a85268cf8f2c19240ffdc1ee5855f9a1046a0feaf1ea05f3eb5ff3d0a120264',
     images: [
-      '/images/projects/project_04_01.png',
-      '/images/projects/project_04_02.png',
-      '/images/projects/project_04_03.png',
-      '/images/projects/project_04_04.png'
+      'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778667879710-portfolio_202512_13.png?auth_key=377511353d3710986a5b39d61a28285207fc756eb8ac4ffa9226fa78099646ac',
+      'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778667879717-portfolio_202512_14.png?auth_key=12224af10daf3093e56f4985e169891814f32e77be62ce0395bd306f6dd515de',
+      'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778667879722-portfolio_202512_15.png?auth_key=530c5b84f8999ff73fd6f2be17edbc38853701511dda3e73260c79ea9827daa8',
+      'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778667879724-portfolio_202512_16.png?auth_key=bc59abde3a4f7d5feeb019a124ba88a5b96d84fa8d8a7c8fdbb6db1dfe54e839'
     ],
     content: {
       background: '纳水溪村是入选第五批中国传统村落的土家族民族村，背山面水，拥有古盐道、纳水溪、水碓制陶等特色资源。但村落面临衰败、经济水平低、空心化严重等问题。规划旨在通过保护更新恢复村民精神文化中心。',
@@ -414,11 +414,11 @@ const projects = [
       { label: '指导老师', text: '黄涛 刘小虎' }
     ],
     tags: ['数字复原', '沉浸式体验', '参数化设计'],
-    thumbnail: '/images/projects/thumb_05.png',
+    thumbnail: 'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778669590123-05.png?auth_key=572f90bcb8c768f55f9a54e691a93f1eb7facc9d38f5998d806db436ce62443e',
     images: [
-      '/images/projects/project_05_01.png',
-      '/images/projects/project_05_02.png',
-      '/images/projects/project_05_03.png'
+      'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778667986279-portfolio_202512_17.png?auth_key=f8109db852f02fcbda70fbcb1645197262511db7283b8db69babdabb24fb713e',
+      'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778667986273-portfolio_202512_18.png?auth_key=040f5517ac87e06df78be2e66c6be46ee117a8e77bb6135a90ea90c0ea74a478',
+      'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778667986306-portfolio_202512_19.png?auth_key=020d2f1975f3673be074e05fb06192b04687064abe9c8edd6615b21eac42465d'
     ],
     content: {
       background: '武汉曾是长江航运枢纽，旧时"千帆竞发"的盛景如今难觅。设计旨在利用现代数字化工具还原汉阳、汉江的船文化，保存和重现这段壮阔的历史故事，让逐渐消失的航运记忆重焕生机。',
@@ -450,7 +450,7 @@ function Navigation() {
     >
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
-          src="/images/projects/home_main_bg.jpg"
+          src="https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778670338481-IMG_20181116_121139_1_.jpg?auth_key=f100e6650438c12faf5fbc43e2830941e7ec3e0bbaa96767e7c38f0ec42cd472"
           alt=""
           className="w-full h-full object-cover"
         />
@@ -460,7 +460,7 @@ function Navigation() {
         <Link to="/" className="flex items-center gap-3 text-xl font-light tracking-chinese-wide text-neutral-900 font-sans">
           <div className="w-8 h-8 rounded-full overflow-hidden border border-neutral-300">
             <img
-              src="/images/projects/avatar.png"
+              src="https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778670398790-头像.png?auth_key=47fd07771ab80bafb83c7e35c51e265901254d2cb516b2619f0eb7969aa689eb"
               alt=""
               className="w-full h-full object-cover"
             />
@@ -480,13 +480,13 @@ function Navigation() {
 function Home() {
   const [currentBg, setCurrentBg] = useState(0);
   const backgrounds = [
-    '/images/projects/home_bg_01.png',
-    '/images/projects/home_bg_02.png',
-    '/images/projects/home_bg_03.png',
-    '/images/projects/home_bg_04.png',
-    '/images/projects/home_bg_05.png',
-    '/images/projects/home_bg_06.png',
-    '/images/projects/home_bg_07.png'
+    'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778669590173-封面.png?auth_key=c48b9a0d8d3496cf5fe33453a5c514f623ed08baca1b9af97642faf61b83778e',
+    'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778669590073-01.png?auth_key=f83e678169c815111700094efbe70b65aa78856679a9011a07ca421b794128cf',
+    'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778669590079-02.png?auth_key=88a251924e382578f5e8cb844831dce4770111bdefa844b02753a69ceea6df5b',
+    'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778669590092-03.png?auth_key=dba89f496855d57be283e2ab98a8fcc81effa91e91c9ab6852be506350603d7a',
+    'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778669590095-04.png?auth_key=3a85268cf8f2c19240ffdc1ee5855f9a1046a0feaf1ea05f3eb5ff3d0a120264',
+    'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778669590123-05.png?auth_key=572f90bcb8c768f55f9a54e691a93f1eb7facc9d38f5998d806db436ce62443e',
+    'https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778670160716-底面.png?auth_key=71fa07e64c0de1c60877f1db2a8638f3cd51e70126f48370a7c71ba46840ead5'
   ];
 
   useEffect(() => {
@@ -595,9 +595,9 @@ function Projects() {
             transition={{ delay: index * 0.1, duration: 0.6 }}
           >
             <Link to={`/project/${project.id}`} className="group cursor-pointer block">
-              <div className="flex items-start gap-6">
+              <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-6">
                 <span className="text-xs text-neutral-400 tracking-chinese mt-2 font-sans w-6">{project.id}</span>
-                <div className="flex-1">
+                <div className="flex-1 order-2 md:order-1">
                   <div className="flex items-baseline gap-4 mb-2">
                     <h3 className="text-xl font-bold text-neutral-900 group-hover:text-neutral-600 transition-colors tracking-chinese" style={{ fontFamily: 'Microsoft YaHei UI, sans-serif' }}>
                       {project.title}
@@ -610,7 +610,7 @@ function Projects() {
                     <span className="text-xs text-neutral-300 tracking-chinese font-sans">{project.category}</span>
                   </div>
                 </div>
-                <div className="w-32 h-32 flex-shrink-0 overflow-hidden bg-neutral-100">
+                <div className="w-full md:w-32 h-48 md:h-32 flex-shrink-0 overflow-hidden bg-neutral-100 order-1 md:order-2">
                   <img
                     src={project.thumbnail}
                     alt={project.title}
@@ -842,7 +842,7 @@ function Contact() {
         >
           <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-neutral-200">
             <img
-              src="/images/projects/avatar.png"
+              src="https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778670398790-头像.png?auth_key=47fd07771ab80bafb83c7e35c51e265901254d2cb516b2619f0eb7969aa689eb"
               alt="邹晔"
               className="w-full h-full object-cover"
             />
@@ -878,10 +878,6 @@ function Contact() {
           </div>
           <div className="pt-4 space-y-3">
             <p className="text-neutral-700 font-sans">
-              <span className="text-neutral-400 mr-2">Tel</span>
-              15207148707
-            </p>
-            <p className="text-neutral-700 font-sans">
               <span className="text-neutral-400 mr-2">E-mail</span>
               569617786@qq.com
             </p>
@@ -896,7 +892,7 @@ function Contact() {
             <p className="text-xs text-neutral-400 mb-3 tracking-chinese font-sans">微信</p>
             <div className="w-32 h-32 rounded-lg overflow-hidden border border-neutral-200">
               <img
-                src="/images/projects/wechat_qr.jpg"
+                src="https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778670930038-WeChat.png?auth_key=6fb201489bdd3f7c96a19dbef87d3e28b3011d24d8673014cf0cba548da908b9"
                 alt="微信二维码"
                 className="w-full h-full object-cover"
               />

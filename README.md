@@ -1,6 +1,6 @@
 # 个人建筑作品集
 
-基于 [Astro](https://astro.build) 的静态建筑作品集网站，构建时自动将图片转为 WebP 并生成多尺寸，适合部署到 GitHub Pages。
+基于 React + Webpack 的建筑作品集单页应用，支持明暗主题、移动端作品详情与 CDN 图片加载，通过 GitHub Actions 部署到 GitHub Pages。
 
 ## 本地开发
 
@@ -9,86 +9,51 @@ npm install
 npm run dev
 ```
 
-浏览器打开终端提示的地址（默认 `http://localhost:4321`）。
+浏览器打开 `http://localhost:3266`。
 
 ## 部署到 GitHub Pages
 
-1. 在 GitHub 创建仓库（例如 `architecture-portfolio`）。
-2. 修改 `[astro.config.mjs](astro.config.mjs)`：
-  - `site`: `https://你的用户名.github.io`
-  - `base`: `/你的仓库名/`（若为用户主页仓库 `username.github.io`，则 `base` 设为 `'/'`）
-3. 推送代码到 `main` 分支。
-4. 仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。
-5. 首次 push 后 Actions 会自动构建并发布。
+1. 仓库：`Yvette-zoe/Personal-Architectural-portfolio`
+2. **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**
+3. 推送 `main` 分支后，`.github/workflows/deploy.yml` 会自动构建并发布
 
-站点地址示例：`https://你的用户名.github.io/architecture-portfolio/`
+站点地址：`https://Yvette-zoe.github.io/Personal-Architectural-portfolio/`
 
-## 添加新项目
+生产构建在 GitHub Actions 中会自动设置 webpack `publicPath` 为 `/Personal-Architectural-portfolio/`。
 
-```
-src/content/projects/my-project/index.md   # 元数据与正文
-src/assets/projects/my-project/
-  cover.jpg
-  gallery-01.jpg
-  gallery-02.jpg
-```
+## 修改项目内容
 
-1. 编写 `index.md`（`slug` 需与 assets 子目录名一致）：
+在 `src/App.tsx` 中编辑 `projects` 数组（标题、描述、图片 CDN 地址、详情正文等）。
 
-```yaml
----
-title: 项目名称
-slug: my-project
-year: 2025
-location: 城市
-category: 公共建筑
-featured: true
-order: 3
-description: 一句话项目简介
----
-
-正文 Markdown（可选）…
-```
-
-1. 图片放入 `src/assets/projects/my-project/`。
-2. 在 `src/lib/projectImages.ts` 中 import 并注册到 `projectImages`。
-3. 运行 `npm run dev` 或 push 触发部署。
-
-## 图片规范（控制仓库体积）
-
-提交前建议：
-
-
-| 项目   | 建议                      |
-| ---- | ----------------------- |
-| 最长边  | ≤ 2400px                |
-| 格式   | JPEG 质量 80–85，或 WebP    |
-| 单张体积 | 优化后约 200–800 KB         |
-| 避免   | 未压缩 TIFF、单张 > 5MB 的 PNG |
-
-
-图片放在 `src/assets/projects/<slug>/`，构建时通过 `astro:assets` 自动生成 WebP 与响应式尺寸。
+项目文案参考见 `assets/项目详情页内容.md`。
 
 ## 项目结构
 
 ```
 src/
-  assets/projects/<slug>/   # cover.jpg、gallery-*.jpg
-  content/projects/<slug>/    # index.md
-  lib/projectImages.ts        # slug → 图片注册
-  components/
-  layouts/
-  pages/
-  styles/
+  App.tsx              # 主应用与路由
+  index.tsx            # 入口
+  components/          # 页面组件（预留拆分）
+  hooks/               # 主题等 hooks
+  styles/index.css     # Tailwind 样式
+public/images/         # 本地图片备份（线上主要使用 CDN）
 ```
 
 ## 脚本
 
+| 命令 | 说明 |
+| --- | --- |
+| `npm run dev` | 开发服务器 |
+| `npm run build` | 生产构建到 `dist/` |
+| `npm run preview` | 本地预览构建结果 |
+| `npm run typecheck` | TypeScript 检查 |
 
-| 命令                | 说明            |
-| ----------------- | ------------- |
-| `npm run dev`     | 开发服务器         |
-| `npm run build`   | 生产构建到 `dist/` |
-| `npm run preview` | 预览构建结果        |
+## 更新代码并部署
 
+```bash
+git add .
+git commit -m "描述本次修改"
+git push origin main
+```
 
+推送后 GitHub Actions 会自动重新构建并发布。
