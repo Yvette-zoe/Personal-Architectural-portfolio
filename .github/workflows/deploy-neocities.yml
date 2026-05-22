@@ -1,0 +1,38 @@
+name: Deploy to Neocities
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 拉取代码
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Node 环境
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # 安装依赖
+      - name: Install dependencies
+        run: npm install
+
+      # 构建 Astro
+      - name: Build site
+        run: npm run build
+
+      # 使用 npx 直接运行 CLI（关键）
+      - name: Deploy to Neocities
+        run: |
+          npx neocities-cli push dist
+        env:
+          NEOCITIES_USERNAME: ${{ secrets.NEOCITIES_USERNAME }}
+          NEOCITIES_API_KEY: ${{ secrets.NEOCITIES_API_KEY }}
+          
