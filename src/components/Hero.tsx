@@ -9,7 +9,7 @@ export default function Hero() {
         transition={{ duration: 0.8, ease: 'easeOut' }}
       >
         <h1 className="text-6xl md:text-8xl lg:text-9xl font-light tracking-tight text-neutral-900 mb-8">
-          邹晔
+          YVETTE
         </h1>
         <p className="text-xl md:text-2xl text-neutral-500 font-light max-w-2xl mb-12">
           建筑历史与理论 / 建筑学

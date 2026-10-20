@@ -58,7 +58,7 @@ export default function Navigation() {
               }`}
               whileHover={{ scale: 1.05 }}
             >
-              邹晔
+              YVETTE
             </motion.button>
 
             <div className="flex items-center gap-8">

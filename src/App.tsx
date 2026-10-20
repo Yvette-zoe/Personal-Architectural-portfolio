@@ -457,15 +457,15 @@ function Navigation() {
         <div className="absolute inset-0 bg-white/70" />
       </div>
       <div className="relative z-10 max-w-6xl mx-auto px-8 py-6 flex justify-between items-center">
-        <Link to="/" className="flex items-center gap-3 text-xl font-light tracking-chinese-wide text-neutral-900 font-sans">
+        <Link to="/" className="flex items-center gap-3 text-xl font-normal tracking-normal text-neutral-900" style={{ fontFamily: "'Microsoft YaHei', '微软雅黑', sans-serif" }}>
           <div className="w-8 h-8 rounded-full overflow-hidden border border-neutral-300">
             <img
-              src="https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778670398790-头像.png?auth_key=47fd07771ab80bafb83c7e35c51e265901254d2cb516b2619f0eb7969aa689eb"
-              alt=""
-              className="w-full h-full object-cover"
+              src="images/projects/avatar.jpg"
+              alt="Yvette"
+              className="w-full h-full object-cover object-top"
             />
           </div>
-          ZOU YE
+          Yvette
         </Link>
         <div className="flex gap-12 text-sm tracking-chinese font-sans font-medium">
           <Link to="/" className="text-neutral-600 hover:text-neutral-900 transition-colors">首页</Link>
@@ -534,25 +534,27 @@ function Home() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center"
+          className="text-left"
         >
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-xs tracking-widest text-neutral-500 mb-4 font-sans"
+            className="text-left text-xs tracking-widest text-neutral-500 mb-4 font-sans"
           >
             [NARRATOR]
           </motion.p>
-          <h1 className="text-5xl md:text-7xl font-light tracking-chinese-wide text-neutral-900 mb-4">
-            邹晔
+          <h1 className="text-left text-5xl md:text-7xl font-normal tracking-normal text-neutral-900 mb-4" style={{ fontFamily: "'Microsoft YaHei', '微软雅黑', sans-serif" }}>
+            Yvette
           </h1>
-          <p className="text-base tracking-chinese text-neutral-500 mb-2 font-sans">
-            Zou Ye | 2015-2025
-          </p>
-          <div className="mt-6 space-y-1 text-sm text-neutral-600 font-sans">
-            <p>重庆大学硕士</p>
-            <p>华中科技大学学士</p>
+          <div className="text-left">
+            <p className="text-left text-base tracking-widest text-neutral-500 mb-2 font-sans">
+              2015-2025
+            </p>
+            <div className="mt-6 space-y-1 text-sm text-neutral-600 font-sans">
+              <p className="text-left">Master's, CQU</p>
+              <p className="text-left">Bachelor's, HUST</p>
+            </div>
           </div>
         </motion.div>
 
@@ -838,13 +840,13 @@ function Contact() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mb-10"
+          className="mb-4"
         >
           <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-neutral-200">
             <img
-              src="https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778670398790-头像.png?auth_key=47fd07771ab80bafb83c7e35c51e265901254d2cb516b2619f0eb7969aa689eb"
-              alt="邹晔"
-              className="w-full h-full object-cover"
+              src="images/projects/avatar.jpg"
+              alt="YVETTE"
+              className="w-full h-full object-cover object-top"
             />
           </div>
         </motion.div>
@@ -855,8 +857,8 @@ function Contact() {
           transition={{ delay: 0.3 }}
           className="mb-8"
         >
-          <h2 className="text-2xl font-light tracking-chinese-wide text-neutral-900 mb-2">
-            邹 晔｜Zou Ye
+          <h2 className="text-2xl font-normal tracking-normal text-neutral-900 mb-2" style={{ fontFamily: "'Microsoft YaHei', '微软雅黑', sans-serif" }}>
+            Yvette
           </h2>
           <p className="text-sm text-neutral-500 font-sans">1996/08/04</p>
         </motion.div>
@@ -892,9 +894,9 @@ function Contact() {
             <p className="text-xs text-neutral-400 mb-3 tracking-chinese font-sans">微信</p>
             <div className="w-32 h-32 rounded-lg overflow-hidden border border-neutral-200">
               <img
-                src="https://conversation.cdn.meoo.host/conversations/312857865440444416/image/2026-05-13/1778670930038-WeChat.png?auth_key=6fb201489bdd3f7c96a19dbef87d3e28b3011d24d8673014cf0cba548da908b9"
+                src="images/projects/wechat_qr.jpg"
                 alt="微信二维码"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain bg-white"
               />
             </div>
           </motion.div>
@@ -907,7 +909,7 @@ function Contact() {
 function Footer() {
   return (
     <footer className="py-12 px-8 text-center">
-      <p className="text-xs text-neutral-300 tracking-chinese font-sans">ZOU YE PORTFOLIO</p>
+      <p className="text-xs text-neutral-300 tracking-widest font-sans">YVETTE PORTFOLIO</p>
     </footer>
   );
 }
