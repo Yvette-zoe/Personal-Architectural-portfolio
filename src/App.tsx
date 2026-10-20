@@ -461,11 +461,11 @@ function Navigation() {
           <div className="w-8 h-8 rounded-full overflow-hidden border border-neutral-300">
             <img
               src="images/projects/avatar.jpg"
-              alt="Yvette"
+              alt="ZouYe"
               className="w-full h-full object-cover object-top"
             />
           </div>
-          Yvette
+          ZouYe
         </Link>
         <div className="flex gap-12 text-sm tracking-chinese font-sans font-medium">
           <Link to="/" className="text-neutral-600 hover:text-neutral-900 transition-colors">首页</Link>
@@ -545,7 +545,7 @@ function Home() {
             [NARRATOR]
           </motion.p>
           <h1 className="text-left text-5xl md:text-7xl font-normal tracking-normal text-neutral-900 mb-4" style={{ fontFamily: "'Microsoft YaHei', '微软雅黑', sans-serif" }}>
-            Yvette
+            ZouYe
           </h1>
           <div className="text-left">
             <p className="text-left text-base tracking-widest text-neutral-500 mb-2 font-sans">
@@ -845,7 +845,7 @@ function Contact() {
           <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-neutral-200">
             <img
               src="images/projects/avatar.jpg"
-              alt="YVETTE"
+              alt="ZouYe"
               className="w-full h-full object-cover object-top"
             />
           </div>
@@ -858,7 +858,7 @@ function Contact() {
           className="mb-8"
         >
           <h2 className="text-2xl font-normal tracking-normal text-neutral-900 mb-2" style={{ fontFamily: "'Microsoft YaHei', '微软雅黑', sans-serif" }}>
-            Yvette
+            ZouYe
           </h2>
           <p className="text-sm text-neutral-500 font-sans">1996/08/04</p>
         </motion.div>
@@ -909,7 +909,7 @@ function Contact() {
 function Footer() {
   return (
     <footer className="py-12 px-8 text-center">
-      <p className="text-xs text-neutral-300 tracking-widest font-sans">YVETTE PORTFOLIO</p>
+      <p className="text-xs text-neutral-300 tracking-widest font-sans">ZouYe PORTFOLIO</p>
     </footer>
   );
 }

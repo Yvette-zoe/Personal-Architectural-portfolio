@@ -58,7 +58,7 @@ export default function Navigation() {
               }`}
               whileHover={{ scale: 1.05 }}
             >
-              YVETTE
+              ZouYe
             </motion.button>
 
             <div className="flex items-center gap-8">
